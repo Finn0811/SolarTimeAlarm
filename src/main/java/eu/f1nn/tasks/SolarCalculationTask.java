@@ -44,13 +44,13 @@ public class SolarCalculationTask {
         if (sunriseWithDelay.isAfter(currentMoment)) {
             logger.info("Scheduling SunriseTimerTask at " + sunriseWithDelay.toZonalTimestamp(() -> "Europe/Berlin").toString());
             Timer sunriseTimer = new Timer();
-            sunriseTimer.schedule(new SunriseTimerTask(this.fe2AlarmController), TemporalType.JAVA_UTIL_DATE.from(sunriseResult.get()));
+            sunriseTimer.schedule(new SunriseTimerTask(this.fe2AlarmController), TemporalType.JAVA_UTIL_DATE.from(sunriseWithDelay));
         }
 
         if (sunsetWithDelay.isAfter(currentMoment)) {
             logger.info("Scheduling SunsetTimerTask at " + sunsetWithDelay.toZonalTimestamp(() -> "Europe/Berlin").toString());
             Timer sunsetTimer = new Timer();
-            sunsetTimer.schedule(new SunsetTimerTask(this.fe2AlarmController), TemporalType.JAVA_UTIL_DATE.from(sunsetResult.get()));
+            sunsetTimer.schedule(new SunsetTimerTask(this.fe2AlarmController), TemporalType.JAVA_UTIL_DATE.from(sunsetWithDelay));
         }
     }
 }
