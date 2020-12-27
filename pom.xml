@@ -23,7 +23,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>SolarTimeAlarm</mainClass>
+                            <mainClass>eu.f1nn.SolarTimeAlarm</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
