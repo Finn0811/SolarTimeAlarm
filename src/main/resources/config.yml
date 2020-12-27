@@ -1,0 +1,7 @@
+lat: 0.0
+lng: 0.0
+sunriseDelay: 0
+sunsetDelay: 0
+alamosFe2ExternalUri: "http://127.0.0.1:83/rest/external/http"
+sunriseAddress: "sunrise"
+sunsetAddress: "sunset"
